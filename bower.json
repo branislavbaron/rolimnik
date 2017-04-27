@@ -1,0 +1,21 @@
+{
+  "name": "rolinmik",
+  "description": "Gym website",
+  "main": "index.js",
+  "authors": [
+    "Branislav Baron"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/branislavbaron/rolinmik",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "^4.7.0",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
