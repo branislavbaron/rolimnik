@@ -5,11 +5,21 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("dist/scss/rolinmik.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("dist/css"))
+        .pipe(browserSync.stream());
+});
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-    return gulp.src('dist/css/*.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
+    return gulp.src('dist/css/rolinmik.css')
+        .pipe(cleanCSS({debug: true}, function(details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.reload({
@@ -29,36 +39,20 @@ gulp.task('minify-js', function() {
 });
 
 
-// Run everything
-gulp.task('default', ['sass', 'minify-css', 'minify-js']);
-
-
-// Dev task with browserSync
-gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
-    gulp.watch('dist/css/*.css', ['minify-css']);
-    gulp.watch('dist/js/*.js', ['minify-js']);
-    // Reloads the browser whenever HTML or JS files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('dist/js/*.js', browserSync.reload);
-});
-
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass', 'minify-css', 'minify-js'], function() {
 
     browserSync.init({
         server: "./"
     });
 
-    gulp.watch("scss/*.scss", ['sass']);
-    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch('dist/scss/*.scss', ['sass']);
+    gulp.watch('dist/css/*.css', ['minify-css']);
+    gulp.watch('dist/js/*.js', ['minify-js']);
+    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch('dist/js/*.js').on('change', browserSync.reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
-    return gulp.src("scss/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("css"))
-        .pipe(browserSync.stream());
-});
+
 
 gulp.task('default', ['serve']);
