@@ -1,0 +1,110 @@
+@import 'variables';
+@import 'mixins';
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+	background-color: #E4E8EE;
+}
+// body {
+//     overflow-x: hidden;
+//     @include body-font;
+// }
+
+// h1, h2, h3, h4, h5, h6 {
+//     @include heading-font;
+//     font-weight: 700;
+// }
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+	outline: none;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+header {
+	background-color: grey;
+	padding-top: 0.7rem;
+
+	.social-media {
+		float: right;
+	}
+	.list-inline-item a {
+		text-decoration: none;
+	}
+}
+.carousel-inner {
+	
+	img {
+		width: 100%;
+	}	
+	.carousel-caption {
+		@include left-border($caption-text, $caption-border-width, $theme-primary); 
+		@include caption($caption-bg-faded);
+		right: 60%;
+		bottom: 20%;
+		left: 21%;
+	}
+
+}
+
+.card {
+
+	border: none;
+	padding: 1.5rem 0;
+	opacity: 0.7;
+
+	&.card-inverse {
+		opacity: 1;
+		@include left-border($caption-text, $caption-border-width, $theme-primary);
+		.card-img-overlay {
+			left: 50%;
+			padding: 2.25rem 1rem;
+			@include caption($caption-bg-faded);
+			h3 {
+				color: $caption-text;
+			}
+
+			p {
+				color: $caption-text;
+			}
+		}
+	}
+	.card-block {
+		padding: 0;
+
+		h3 {
+			border-bottom: 1px solid #d4d4d4;
+			padding: 1rem;
+			margin: 0;
+		}
+		p {
+			padding: 1rem;
+		}
+
+	}
+
+	&.active {
+		opacity: 1;
+		color: $caption-text;
+
+		.card-block h3 {
+			background-color: $caption-bg;
+			border: none;
+		}
+
+		.card-block p {
+			background-color: $theme-primary;
+		}
+	}
+	img {
+		height: 8rem;
+	}
+}
