@@ -30,15 +30,21 @@ a.active {
 }
 
 header {
-	background-color: grey;
+	background-color: $theme-black;
 	padding-top: 0.7rem;
-
+	color: $text-white;
+	@include bottom-border($text-white, $border-width, $theme-primary);
 	.social-media {
 		float: right;
 	}
 	.list-inline-item a {
 		text-decoration: none;
+		color: $text-white;
 	}
+}
+
+.navbar-collapse {
+	justify-content: flex-end;
 }
 .carousel-inner {
 	
@@ -46,8 +52,8 @@ header {
 		width: 100%;
 	}	
 	.carousel-caption {
-		@include left-border($caption-text, $caption-border-width, $theme-primary); 
-		@include caption($caption-bg-faded);
+		@include left-border($text-white, $caption-border-width, $theme-primary); 
+		background-color: $caption-bg-faded;
 		right: 60%;
 		bottom: 20%;
 		left: 21%;
@@ -55,28 +61,12 @@ header {
 
 }
 
-.card {
+.card.basic-training {
 
 	border: none;
 	padding: 1.5rem 0;
 	opacity: 0.7;
 
-	&.card-inverse {
-		opacity: 1;
-		@include left-border($caption-text, $caption-border-width, $theme-primary);
-		.card-img-overlay {
-			left: 50%;
-			padding: 2.25rem 1rem;
-			@include caption($caption-bg-faded);
-			h3 {
-				color: $caption-text;
-			}
-
-			p {
-				color: $caption-text;
-			}
-		}
-	}
 	.card-block {
 		padding: 0;
 
@@ -93,7 +83,7 @@ header {
 
 	&.active {
 		opacity: 1;
-		color: $caption-text;
+		color: $text-white;
 
 		.card-block h3 {
 			background-color: $caption-bg;
@@ -106,5 +96,26 @@ header {
 	}
 	img {
 		height: 8rem;
+	}
+}
+
+.card {
+
+	&.card-inverse {
+		opacity: 1;
+		padding: 0;
+		@include left-border($text-white, $caption-border-width, $theme-primary);
+		.card-img-overlay {
+			left: 50%;
+			padding: 2.25rem 1rem;
+			background-color: $caption-bg-faded;
+			h3 {
+				color: $text-white;
+			}
+
+			p {
+				color: $text-white;
+			}
+		}
 	}
 }
