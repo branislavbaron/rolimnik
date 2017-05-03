@@ -15,12 +15,19 @@ a.active {
   background-color: #fff; }
 
 header {
-  background-color: grey;
-  padding-top: 0.7rem; }
+  background-color: #292a2c;
+  padding-top: 0.7rem;
+  color: white;
+  color: white;
+  border-bottom: 2px solid #D74340; }
   header .social-media {
     float: right; }
   header .list-inline-item a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
+
+.navbar-collapse {
+  justify-content: flex-end; }
 
 .carousel-inner img {
   width: 100%; }
@@ -33,37 +40,39 @@ header {
   bottom: 20%;
   left: 21%; }
 
-.card {
+.card.basic-training {
   border: none;
   padding: 1.5rem 0;
   opacity: 0.7; }
-  .card.card-inverse {
-    opacity: 1;
-    color: white;
-    border-left: 5px solid #D74340;
-    background-color: rgba(38, 39, 41, 0.7); }
-    .card.card-inverse .card-img-overlay {
-      left: 50%;
-      padding: 2.25rem 1rem; }
-      .card.card-inverse .card-img-overlay h3 {
-        color: white; }
-      .card.card-inverse .card-img-overlay p {
-        color: white; }
-  .card .card-block {
+  .card.basic-training .card-block {
     padding: 0; }
-    .card .card-block h3 {
+    .card.basic-training .card-block h3 {
       border-bottom: 1px solid #d4d4d4;
       padding: 1rem;
       margin: 0; }
-    .card .card-block p {
+    .card.basic-training .card-block p {
       padding: 1rem; }
-  .card.active {
+  .card.basic-training.active {
     opacity: 1;
     color: white; }
-    .card.active .card-block h3 {
+    .card.basic-training.active .card-block h3 {
       background-color: #262729;
       border: none; }
-    .card.active .card-block p {
+    .card.basic-training.active .card-block p {
       background-color: #D74340; }
-  .card img {
+  .card.basic-training img {
     height: 8rem; }
+
+.card.card-inverse {
+  opacity: 1;
+  padding: 0;
+  color: white;
+  border-left: 5px solid #D74340; }
+  .card.card-inverse .card-img-overlay {
+    left: 50%;
+    padding: 2.25rem 1rem;
+    background-color: rgba(38, 39, 41, 0.7); }
+    .card.card-inverse .card-img-overlay h3 {
+      color: white; }
+    .card.card-inverse .card-img-overlay p {
+      color: white; }

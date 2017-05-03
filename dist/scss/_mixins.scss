@@ -12,11 +12,12 @@
     &::-webkit-input-placeholder { @content; }
 }
 
-@mixin left-border($caption-text, $caption-border-width, $theme-primary) {
-	color: $caption-text;
+@mixin left-border($text-white, $caption-border-width, $theme-primary) {
+	color: $text-white;
 	border-left: $caption-border-width solid $theme-primary;
 }
 
-@mixin caption($background)	{
-	background-color: $caption-bg;
+@mixin bottom-border($text-white, $border-width, $theme-primary) {
+	color: $text-white;
+	border-bottom: $border-width solid $theme-primary;
 }
