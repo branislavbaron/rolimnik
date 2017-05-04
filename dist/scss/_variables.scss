@@ -1,7 +1,10 @@
 $theme-primary: #D74340;
 $theme-black: #292a2c;
 $text-white: white;
+$text-dark: black;
+$light-theme-white: #f7f7f7;
+$light-theme-black: lighten($theme-black, 20%);
 $caption-bg-faded: rgba(38,39,41, 0.7);
 $caption-bg: rgb(38,39,41);
-$caption-border-width: 5px;
+$caption-border-width: 3px;
 $border-width: 2px;
