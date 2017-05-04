@@ -26,15 +26,25 @@ header {
     text-decoration: none;
     color: white; }
 
-.navbar-collapse {
-  justify-content: flex-end; }
+.navbar {
+  padding: 0; }
+  .navbar .navbar-nav .nav-item .nav-link {
+    text-transform: uppercase;
+    padding: 1.5rem; }
+    .navbar .navbar-nav .nav-item .nav-link:hover {
+      background-color: #D74340;
+      color: white; }
+  .navbar .navbar-nav .nav-item.active {
+    background-color: #D74340; }
+    .navbar .navbar-nav .nav-item.active .nav-link {
+      color: white; }
 
 .carousel-inner img {
   width: 100%; }
 
 .carousel-inner .carousel-caption {
   color: white;
-  border-left: 5px solid #D74340;
+  border-left: 3px solid #D74340;
   background-color: rgba(38, 39, 41, 0.7);
   right: 60%;
   bottom: 20%;
@@ -63,16 +73,72 @@ header {
   .card.basic-training img {
     height: 8rem; }
 
-.card.card-inverse {
-  opacity: 1;
-  padding: 0;
+.card {
+  margin-bottom: 1.5rem; }
+  .card.card-inverse {
+    opacity: 1;
+    padding: 0;
+    color: white;
+    border-left: 3px solid #D74340; }
+    .card.card-inverse .card-img-overlay {
+      left: 50%;
+      padding: 2.25rem 1rem;
+      background-color: rgba(38, 39, 41, 0.7); }
+      .card.card-inverse .card-img-overlay h3 {
+        color: white; }
+      .card.card-inverse .card-img-overlay p {
+        color: white; }
+
+.card-deck .card-header {
+  margin: 1rem 0;
+  color: black;
+  border-left: 3px solid #D74340; }
+  .card-deck .card-header.dark {
+    color: white;
+    background-color: #292a2c; }
+  .card-deck .card-header.inverse {
+    background-color: #292a2c;
+    color: white; }
+
+.card-deck .card:not(:first-child) {
+  margin-left: 0; }
+
+.card-deck .card-img-top {
+  margin: 1rem;
   color: white;
-  border-left: 5px solid #D74340; }
-  .card.card-inverse .card-img-overlay {
-    left: 50%;
-    padding: 2.25rem 1rem;
-    background-color: rgba(38, 39, 41, 0.7); }
-    .card.card-inverse .card-img-overlay h3 {
-      color: white; }
-    .card.card-inverse .card-img-overlay p {
-      color: white; }
+  border-bottom: 2px solid #D74340; }
+
+.card-deck .card .card-title {
+  border-bottom: 1px solid #d4d4d4;
+  padding-bottom: 1rem; }
+
+.card-deck .card.dark {
+  color: white;
+  background-color: #292a2c; }
+
+.card-deck .card .card-footer.dark {
+  color: white;
+  background-color: #292a2c; }
+
+footer {
+  margin-top: 3rem; }
+  footer .footer-top {
+    background-color: #f7f7f7;
+    padding-top: 3rem; }
+    footer .footer-top .list-group-item a {
+      text-decoration: none;
+      color: black; }
+    footer .footer-top .social {
+      margin-right: 1rem; }
+  footer .footer-middle {
+    background-color: #5a5c61;
+    padding-top: 1rem; }
+    footer .footer-middle .list-inline .list-inline-item {
+      margin-right: 1.5rem; }
+      footer .footer-middle .list-inline .list-inline-item a {
+        text-decoration: none;
+        color: black; }
+  footer .footer-bottom {
+    padding-top: 1rem;
+    background-color: #292a2c;
+    color: white; }
