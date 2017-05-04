@@ -38,14 +38,35 @@ header {
 		float: right;
 	}
 	.list-inline-item a {
-		text-decoration: none;
-		color: $text-white;
+		@include nodecor($text-white);
 	}
 }
 
-.navbar-collapse {
-	justify-content: flex-end;
+.navbar {
+	padding: 0;
+	.navbar-nav {
+
+		.nav-item {
+			.nav-link {
+				text-transform: uppercase;
+				padding: 1.5rem;
+
+				&:hover {
+					background-color: $theme-primary;
+					color: $text-white;
+				}
+			}
+		}
+		.nav-item.active {
+			background-color: $theme-primary;
+
+			.nav-link {
+				color: $text-white;
+			}
+		}
+	}
 }
+
 .carousel-inner {
 	
 	img {
@@ -84,12 +105,10 @@ header {
 	&.active {
 		opacity: 1;
 		color: $text-white;
-
 		.card-block h3 {
 			background-color: $caption-bg;
 			border: none;
 		}
-
 		.card-block p {
 			background-color: $theme-primary;
 		}
@@ -100,7 +119,7 @@ header {
 }
 
 .card {
-
+	margin-bottom: 1.5rem;
 	&.card-inverse {
 		opacity: 1;
 		padding: 0;
@@ -112,10 +131,77 @@ header {
 			h3 {
 				color: $text-white;
 			}
-
 			p {
 				color: $text-white;
 			}
 		}
+	}
+}
+
+.card-deck {
+	.card-header {
+		margin: 1rem 0;
+		@include left-border-dark($text-dark, $caption-border-width, $theme-primary);
+		&.dark {
+			@include dark($text-white, $theme-black);
+		}
+		&.inverse {
+			background-color: $theme-black;
+			color: $text-white;
+		}
+	}
+	.card {
+
+		&:not(:first-child) {
+			margin-left: 0;
+		}
+
+		&-img-top {
+			margin: 1rem;
+			@include bottom-border($text-white, $border-width, $theme-primary);
+
+		}
+		& .card-title {
+			border-bottom: 1px solid #d4d4d4;
+			padding-bottom: 1rem;
+		}
+		&.dark {
+			@include dark($text-white, $theme-black);
+		}
+		& .card-footer.dark{
+			@include dark($text-white, $theme-black);
+		}
+	}
+}
+
+footer {
+	margin-top: 3rem;
+	.footer-top {
+		background-color: $light-theme-white;
+		padding-top: 3rem;
+ 		.list-group-item a {
+ 			@include nodecor-dark($text-dark);
+ 		}
+		.social {
+			margin-right: 1rem;
+		}
+	}
+	.footer-middle {
+		background-color: $light-theme-black;
+		padding-top: 1rem;
+
+		.list-inline {
+			.list-inline-item {
+				margin-right: 1.5rem;
+				a {
+				@include nodecor-dark($text-dark);
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		padding-top: 1rem;
+		background-color: $theme-black;
+		color: $text-white;
 	}
 }
