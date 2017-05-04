@@ -16,8 +16,27 @@
 	color: $text-white;
 	border-left: $caption-border-width solid $theme-primary;
 }
+@mixin left-border-dark($text-dark, $caption-border-width, $theme-primary) {
+	color: $text-dark;
+	border-left: $caption-border-width solid $theme-primary;
+}
 
 @mixin bottom-border($text-white, $border-width, $theme-primary) {
 	color: $text-white;
 	border-bottom: $border-width solid $theme-primary;
+}
+
+@mixin dark($text-white, $theme-black) {
+	color: $text-white;
+	background-color: $theme-black;
+}
+
+@mixin nodecor($text-white){
+	text-decoration: none;
+	color: $text-white;
+}
+
+@mixin nodecor-dark($text-dark){
+	text-decoration: none;
+	color: $text-dark;
 }
