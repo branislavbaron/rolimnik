@@ -1,4 +1,6 @@
-$theme-primary: #D74340;
+$theme-primary: #e2211d;
+$theme-primary-fadded: lighten($theme-primary, 5%);
+$theme-primary-darken: darken($theme-primary, 5%);
 $theme-black: #292a2c;
 $text-white: white;
 $text-dark: black;
@@ -8,3 +10,4 @@ $caption-bg-faded: rgba(38,39,41, 0.7);
 $caption-bg: rgb(38,39,41);
 $caption-border-width: 3px;
 $border-width: 2px;
+

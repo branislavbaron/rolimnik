@@ -4,6 +4,17 @@
     position: $pos;
 }
 
+@mixin hovereffect(){
+	color: $theme-primary;
+}
+
+@mixin linx ($theme-primary) {
+  a {
+    &:hover {
+      	color: $theme-primary;   
+    	}
+	}
+}
 @mixin input-placeholder {
     &.placeholder { @content; }
     &:-moz-placeholder { @content; }
@@ -34,9 +45,15 @@
 @mixin nodecor($text-white){
 	text-decoration: none;
 	color: $text-white;
+	&:hover {
+      	color: $theme-primary;   
+    	}
 }
 
 @mixin nodecor-dark($text-dark){
 	text-decoration: none;
 	color: $text-dark;
+	&:hover {
+      	color: $theme-primary;   
+    	}
 }
