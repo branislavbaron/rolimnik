@@ -57,3 +57,25 @@
       	color: $theme-primary;   
     	}
 }
+
+@mixin insetonelements($theme-primary-fadded, $theme-primary){
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+			box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1),
+								0px 1px 1px rgba(0,0,0,0.4);
+			background: -webkit-linear-gradient(top, $theme-primary-fadded, $theme-primary);
+}
+
+@mixin insetonelementsre($theme-primary-fadded, $theme-primary){
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+			box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1),
+								0px 1px 1px rgba(0,0,0,0.4);
+			background: -webkit-linear-gradient(top, $theme-primary, $theme-primary-fadded);
+}
+
+@mixin dot {
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	background-color: $theme-primary;
+	position: absolute;
+}
