@@ -295,7 +295,10 @@ footer {
       color: white; }
     .breadcrumb .breadcrumb-item.active {
       background-color: rgba(0, 0, 0, 0.1);
-      padding: 0.2rem 0.5rem; }
+      padding: 0.2rem 0.5rem;
+      -moz-box-shadow: inset 0 0 5px #881411;
+      -webkit-box-shadow: inset 0 0 5px #881411;
+      box-shadow: inset 0 0 5px #881411; }
 
 .gym-object-info .col-md-3 {
   position: relative;
@@ -711,3 +714,104 @@ footer {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
   /* IE6-8 */ }
+
+.trainer-circle {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 3.5rem;
+  position: relative;
+  border: 2px solid #e2211d;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-transition: 800ms;
+  -moz-transition: 800ms;
+  -o-transition: 800ms;
+  transition: 800ms;
+  border-radius: 50%;
+  left: 23%; }
+
+.line {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  height: 0.1rem;
+  top: 6rem; }
+
+#trainers .card-deck {
+  perspective: 2000px;
+  position: relative; }
+  #trainers .card-deck .outer-card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+#trainers .card-img-top {
+  border-top: 2px solid #e2211d; }
+
+#trainers .card-text {
+  margin: 1rem; }
+
+#trainers .card.dark {
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  -o-transition: -o-transform .5s;
+  transition: transform .5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+  transition: transform 1s; }
+  #trainers .card.dark .front-plate, #trainers .card.dark .back-plate {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  #trainers .card.dark .front-plate {
+    z-index: 2;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14); }
+  #trainers .card.dark:hover {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+
+#trainers .back-plate {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 3;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14); }
+  #trainers .back-plate i {
+    color: white;
+    margin: 0 0.5rem; }
+    #trainers .back-plate i:hover {
+      color: #e2211d; }
+  #trainers .back-plate .card-block {
+    padding: 2.3rem; }
+    #trainers .back-plate .card-block a {
+      text-decoration: none;
+      color: white;
+      margin: 0 0.5rem; }
+      #trainers .back-plate .card-block a:hover {
+        color: #e2211d; }
+    #trainers .back-plate .card-block h5 {
+      margin: 0.6rem 0; }
+
+#trainers .card-heading {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px dashed #e2211d; }
+
+#trainers .trainer-footer-bottom {
+  padding: 0.75rem 1.25rem;
+  background-color: #292a2c;
+  border-top: 1px dashed #e2211d; }
+  #trainers .trainer-footer-bottom p {
+    color: white; }
