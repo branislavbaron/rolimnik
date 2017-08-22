@@ -818,3 +818,12 @@ footer {
 
 table i {
   color: #e2211d; }
+
+#accordion .card-header {
+  border-left: 2px solid #e2211d; }
+
+#accordion a {
+  text-decoration: none;
+  color: black; }
+  #accordion a:hover {
+    color: #e2211d; }
