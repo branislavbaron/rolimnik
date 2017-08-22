@@ -815,3 +815,6 @@ footer {
   border-top: 1px dashed #e2211d; }
   #trainers .trainer-footer-bottom p {
     color: white; }
+
+table i {
+  color: #e2211d; }
