@@ -886,3 +886,13 @@ table {
 		color: $theme-primary;
 	}
 }
+
+#accordion {
+	
+	.card-header {
+		border-left: $border-width solid $theme-primary;
+	}
+	a {
+		@include nodecor-dark($text-dark);
+	}
+}
