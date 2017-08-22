@@ -880,3 +880,9 @@ footer {
 		}
 	}
 }
+
+table {
+	& i {
+		color: $theme-primary;
+	}
+}
