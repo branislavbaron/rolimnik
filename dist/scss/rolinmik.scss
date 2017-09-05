@@ -12,7 +12,7 @@ a:hover,
 a:focus,
 a:active,
 a:visited,
-a.active {
+a:active {
 	outline: none;
 }
 
@@ -126,7 +126,7 @@ header {
 		position: absolute;
 		bottom: 1.7rem;
 		padding: 2rem;
-		right: 18%;
+		right: 0;
 		background-color: $caption-bg-faded;
 		color: $text-white;
 		@include left-border($text-white, $caption-border-width, $theme-primary);
@@ -141,7 +141,7 @@ header {
 .card.basic-training {
 
 	border: none;
-	padding: 1.5rem 0;
+	margin: 1.5rem 0;
 	opacity: 0.7;
 
 	.card-block {
@@ -176,6 +176,7 @@ header {
 
 .card {
 	margin-bottom: 1.5rem;
+	box-shadow: 0 0 19px 0 rgba(0,0,0,.16);
 	&.card-inverse {
 		opacity: 1;
 		padding: 0;
@@ -366,8 +367,8 @@ footer {
 	} 
 	.rounded-circle {
 		background-color: white;
-		width: 10rem;
-		height: 10rem;
+		width: 9rem;
+		height: 9rem;
 		margin: 0 3.5rem;
 		position: relative;
 		border: 2px solid $theme-primary;
@@ -378,35 +379,26 @@ footer {
 		-moz-transition: 800ms;
 		-o-transition: 800ms;
 		transition: 800ms;
-
+	
+		.gym-svg {
+			max-width: 70%;
+		    position: relative;
+		    top: 1rem;
+		}
+	
 		&:before {
 			@include pseudo;
 			z-index: -1;
-			width: 180%;
+			width: 203%;
 			border-bottom: 2px dashed $theme-primary;
 			top: 5rem;
 			left: -5rem;
 		}
 
-		&:hover {
-			background-color: $theme-primary;
-			& i {
-				color: $text-white;
-			}
-		}
-
-		i {
-			margin: 0 auto;
-			position: absolute;
-			left: 34%;
-			top: 36%;
-			color: $theme-primary;
-		}
-
 		.dot {
 			@include dot;
 			left: -5rem;
-			bottom: 4.3rem;
+			bottom: 3.3rem;
 		}
 	}
 
@@ -908,3 +900,4 @@ table {
     	}
 	}
 }
+

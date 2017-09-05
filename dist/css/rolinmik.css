@@ -8,7 +8,7 @@ a:hover,
 a:focus,
 a:active,
 a:visited,
-a.active {
+a:active {
   outline: none; }
 
 .btn-danger {
@@ -93,7 +93,7 @@ header {
 #carousel .carousel-inner .carousel-caption {
   color: white;
   border-left: 3px solid #e2211d;
-  background-color: rgba(38, 39, 41, 0.7);
+  background-color: rgba(38, 39, 41, 0.8);
   position: absolute;
   right: 15%;
   bottom: 4.5rem;
@@ -111,8 +111,8 @@ header {
     position: absolute;
     bottom: 1.7rem;
     padding: 2rem;
-    right: 18%;
-    background-color: rgba(38, 39, 41, 0.7);
+    right: 0;
+    background-color: rgba(38, 39, 41, 0.8);
     color: white;
     color: white;
     border-left: 3px solid #e2211d; }
@@ -123,7 +123,7 @@ header {
 
 .card.basic-training {
   border: none;
-  padding: 1.5rem 0;
+  margin: 1.5rem 0;
   opacity: 0.7; }
   .card.basic-training .card-block {
     padding: 0; }
@@ -145,7 +145,8 @@ header {
     height: 8rem; }
 
 .card {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.16); }
   .card.card-inverse {
     opacity: 1;
     padding: 0;
@@ -154,7 +155,7 @@ header {
     .card.card-inverse .card-img-overlay {
       left: 50%;
       padding: 2.25rem 1rem;
-      background-color: rgba(38, 39, 41, 0.7); }
+      background-color: rgba(38, 39, 41, 0.8); }
       .card.card-inverse .card-img-overlay h3 {
         color: white; }
       .card.card-inverse .card-img-overlay p {
@@ -312,8 +313,8 @@ footer {
 
 .gym-object-info .rounded-circle {
   background-color: white;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   margin: 0 3.5rem;
   position: relative;
   border: 2px solid #e2211d;
@@ -324,25 +325,19 @@ footer {
   -moz-transition: 800ms;
   -o-transition: 800ms;
   transition: 800ms; }
+  .gym-object-info .rounded-circle .gym-svg {
+    max-width: 70%;
+    position: relative;
+    top: 1rem; }
   .gym-object-info .rounded-circle:before {
     content: "";
     display: block;
     position: absolute;
     z-index: -1;
-    width: 180%;
+    width: 203%;
     border-bottom: 2px dashed #e2211d;
     top: 5rem;
     left: -5rem; }
-  .gym-object-info .rounded-circle:hover {
-    background-color: #e2211d; }
-    .gym-object-info .rounded-circle:hover i {
-      color: white; }
-  .gym-object-info .rounded-circle i {
-    margin: 0 auto;
-    position: absolute;
-    left: 34%;
-    top: 36%;
-    color: #e2211d; }
   .gym-object-info .rounded-circle .dot {
     width: 0.6rem;
     height: 0.6rem;
@@ -350,7 +345,7 @@ footer {
     background-color: #e2211d;
     position: absolute;
     left: -5rem;
-    bottom: 4.3rem; }
+    bottom: 3.3rem; }
 
 .gym-object-info .dot-end {
   width: 0.6rem;
@@ -420,7 +415,7 @@ footer {
     position: relative;
     color: white;
     border-left: 3px solid #e2211d;
-    background-color: rgba(38, 39, 41, 0.7);
+    background-color: rgba(38, 39, 41, 0.8);
     padding: 0.5rem 1rem;
     top: 0.04rem;
     left: 5%; }
