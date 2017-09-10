@@ -522,12 +522,6 @@ footer {
 .contact-info {
   margin: 0.5rem; }
 
-.list-inline-item a {
-  text-decoration: none;
-  color: black; }
-  .list-inline-item a:hover {
-    color: #e2211d; }
-
 .list-unstyled a {
   text-decoration: none;
   color: black; }
@@ -760,6 +754,11 @@ footer {
   -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
   transition: transform 1s; }
+  #trainers .card.dark.hover {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
   #trainers .card.dark .front-plate, #trainers .card.dark .back-plate {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -768,11 +767,6 @@ footer {
   #trainers .card.dark .front-plate {
     z-index: 2;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14); }
-  #trainers .card.dark:hover {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
 
 #trainers .back-plate {
   position: absolute;
@@ -783,33 +777,47 @@ footer {
   transform: rotateY(180deg);
   z-index: 3;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14); }
-  #trainers .back-plate i {
+
+#trainers .card-block {
+  padding: 2.3rem; }
+  #trainers .card-block a {
+    text-decoration: none;
     color: white;
     margin: 0 0.5rem; }
-    #trainers .back-plate i:hover {
+    #trainers .card-block a:hover {
       color: #e2211d; }
-  #trainers .back-plate .card-block {
-    padding: 2.3rem; }
-    #trainers .back-plate .card-block a {
-      text-decoration: none;
-      color: white;
-      margin: 0 0.5rem; }
-      #trainers .back-plate .card-block a:hover {
-        color: #e2211d; }
-    #trainers .back-plate .card-block h5 {
-      margin: 0.6rem 0; }
+  #trainers .card-block h5 {
+    margin: 0.6rem 0; }
 
-#trainers .card-heading {
+.card-heading {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   border-bottom: 1px dashed #e2211d; }
 
-#trainers .trainer-footer-bottom {
+.trainer-footer-bottom {
   padding: 0.75rem 1.25rem;
   background-color: #292a2c;
-  border-top: 1px dashed #e2211d; }
-  #trainers .trainer-footer-bottom p {
+  border-top: 1px dashed #e2211d;
+  position: relative; }
+  .trainer-footer-bottom a {
+    text-decoration: none;
     color: white; }
+    .trainer-footer-bottom a:hover {
+      color: #e2211d; }
+  .trainer-footer-bottom .button-swap {
+    position: absolute;
+    top: 0.7rem; }
+    .trainer-footer-bottom .button-swap.right {
+      right: 1rem; }
+    .trainer-footer-bottom .button-swap.left {
+      left: 1rem; }
+  .trainer-footer-bottom i {
+    color: white;
+    margin: 0 0.5rem; }
+    .trainer-footer-bottom i:hover {
+      color: #e2211d; }
+    .trainer-footer-bottom i p {
+      color: white; }
 
 table i {
   color: #e2211d; }

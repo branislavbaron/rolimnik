@@ -601,9 +601,7 @@ footer {
 .contact-info {
 	margin: 0.5rem;
 }
-.list-inline-item a {
-	@include nodecor($text-dark);
-}
+
 .list-unstyled a {
 	@include nodecor($text-dark);
 }
@@ -812,6 +810,13 @@ footer {
 			-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 			box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 			transition: transform 1s;
+
+			&.hover {
+				-webkit-transform: rotateY( 180deg );
+				-moz-transform: rotateY( 180deg );
+				 -o-transform: rotateY( 180deg );
+				    transform: rotateY( 180deg );
+			}
 	.front-plate, .back-plate {
 	-webkit-backface-visibility: hidden;
    -moz-backface-visibility: hidden;
@@ -821,12 +826,6 @@ footer {
 	.front-plate {
 		z-index: 2;
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
-	}
-		&:hover {
-			-webkit-transform: rotateY( 180deg );
-			-moz-transform: rotateY( 180deg );
-			 -o-transform: rotateY( 180deg );
-			    transform: rotateY( 180deg );
 		}
 	}
 	.back-plate {
@@ -838,12 +837,6 @@ footer {
 		        transform: rotateY( 180deg );
 		        z-index: 3;
 		        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
-		& i {
-			color: $text-white;
-			margin: 0 0.5rem;
-			&:hover {
-				color: $theme-primary;
-			}
 		}
 
 		.card-block {
@@ -866,7 +859,30 @@ footer {
 		padding: 0.75rem 1.25rem;
 		background-color: $theme-black;
 		border-top: 1px dashed $theme-primary;
+		position: relative;
+		
+		a {
+			@include nodecor($text-white);
+		}
 
+		.button-swap {
+			position: absolute;
+			top: 0.7rem;
+
+	 	&.right {
+	 			right: 1rem;
+	 		}
+	 	&.left {
+	 			left: 1rem;
+	 		}
+		}
+
+		i {
+			color: $text-white;
+			margin: 0 0.5rem;
+			&:hover {
+				color: $theme-primary;
+			}
 		p {
 			color: white;
 		}
