@@ -1,4 +1,5 @@
-$theme-primary: #e2211d;
+$theme-red: #e2211d;
+$theme-primary: darken($theme-red, 10%);
 $theme-primary-fadded: lighten($theme-primary, 5%);
 $theme-primary-darken: darken($theme-primary, 5%);
 $theme-primary-ultra-dark: darken($theme-primary, 20%);

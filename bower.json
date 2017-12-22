@@ -15,8 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "components-font-awesome": "^4.7.0",
     "bootstrap": "v4.0.0-alpha.6",
-    "lightbox2": "^2.9.0"
+    "lightbox2": "^2.9.0",
+    "hover": "^2.1.1",
+    "animate.css": "^3.5.2",
+    "waypoints": "^4.0.1"
   }
 }
