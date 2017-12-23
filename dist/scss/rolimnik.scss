@@ -837,7 +837,7 @@ footer {
 			box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 			transition: transform 1s;
 
-			&.hover {
+			&.forward {
 				-webkit-transform: rotateY( 180deg );
 				-moz-transform: rotateY( 180deg );
 				 -o-transform: rotateY( 180deg );
@@ -848,6 +848,9 @@ footer {
    -moz-backface-visibility: hidden;
      -o-backface-visibility: hidden;
         backface-visibility: hidden;
+        .card-swap {
+        	cursor: pointer;
+        }
 	}
 	.front-plate {
 		z-index: 2;
@@ -857,12 +860,19 @@ footer {
 	.back-plate {
 		position: absolute;
 		width: 100%;
+		height: 100%;
 				-webkit-transform: rotateY( 180deg );
 		   -moz-transform: rotateY( 180deg );
 		     -o-transform: rotateY( 180deg );
 		        transform: rotateY( 180deg );
 		        z-index: 3;
 		        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+		        .card-block {
+		        	height: 73%;
+		        }
+		  	ul {
+		  		margin-bottom: 0;
+		  	}
 		}
 
 		.card-block {
@@ -986,5 +996,72 @@ table {
 	.trainer-circle {
 		left: 0;
 		transform: transition(-50%, -50%);
+	}
+}
+
+#blog-posts {
+	.blog-single-post {
+		margin: 3rem 0;
+		padding: 2rem;
+		border: 3px solid $text-white;
+		color: $text-white;
+		background-color: $caption-bg;
+		&:nth-child(even){
+			border-top-right-radius: 13%;
+			border-bottom-left-radius: 9%;
+		}
+		&:nth-child(odd) {
+			border-top-left-radius: 13%;
+			border-bottom-right-radius: 9%;
+		}
+	}
+	p.lead {
+		margin: 1rem;
+	}
+	.blog-text {
+		margin-top: 1rem;
+		margin-right: 5rem;
+	}
+
+	.display-4 {
+		margin-top: 1rem;
+		font-weight: 500;
+		letter-spacing: 0.3rem;
+	}
+	.br-right {
+		border-right: 2px dashed $text-dark;
+	}
+	.card-header {
+	    margin: 1rem 0;
+	    color: #000;
+	    border-left: 3px solid $theme-primary;
+	    text-transform: uppercase;
+	    letter-spacing: .3rem;
+	    font-weight: 500;
+	}
+	.card .card-footer {
+	    width: 100%;
+	    padding: 6px;
+	    position: relative;
+	    color: $text-white;
+	    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+	    box-shadow: inset 1px 1px 20px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.4);
+	    background: -webkit-linear-gradient(top,#cb1e1a,#b51a17);
+	}
+	.social-shares {
+		.social-heading {
+			font-size: 1.2rem;
+			font-weight: 500;
+			letter-spacing: 0.3rem;
+		}
+		span {
+			margin: 0 0.2rem;
+			cursor: pointer;
+			color: $theme-primary;
+			transition: color 0.4s;
+			&:hover {
+				color: $theme-primary-ultra-dark;
+			}
+		}
 	}
 }
