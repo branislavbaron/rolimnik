@@ -1,18 +1,10 @@
    $().ready(function(){
-        $('[rel="tooltip"]').tooltip();
-
-        function rotateCard(btn){
-            var $card = $(btn).closest('.card');
-            if($card.hasClass('hover')){
-                $card.removeClass('hover');
-            } else {
-                $card.addClass('hover');
-            }
-        }
 
 // DOM CACHE
+
         var $packages = $('.packages');
         var $basicTraining = $('.basic-training');
+        var $cardSwapIcon = $('.card-swap');
 
         $('.carousel').on('slid.bs.carousel', function () {
             $basicTraining.removeClass('active');
@@ -30,5 +22,10 @@
     }, {
         offset: '30%'
     });
+
+        $cardSwapIcon.on('click', function() {
+            $('.card.dark').removeClass('forward');
+            $(this).parent().offsetParent().addClass('forward');
+        });
 
     });
