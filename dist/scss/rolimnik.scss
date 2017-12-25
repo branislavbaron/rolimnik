@@ -143,6 +143,9 @@ header {
 					color: $text-white;
 					@include insetonelements($theme-primary-fadded, $theme-primary);
 				}
+				@include breakpoint(phone) {
+					padding: 0.3rem 0.3rem 0.3rem 1.3rem;
+				}
 			}
 		}
 		.nav-item.active {
@@ -166,6 +169,7 @@ header {
 		margin-left: 45%;
 		margin-right: 45%;
 		padding: 1.5rem;
+		z-index: 13;
 		background-color: $theme-primary;
 		@include insetonelements($theme-primary-fadded, $theme-primary);
 
@@ -530,7 +534,9 @@ footer {
 		-moz-transition: 800ms;
 		-o-transition: 800ms;
 		transition: 800ms;
-	
+		@include breakpoint(phone) {
+			margin: 0 5rem;
+		}
 		.gym-svg {
 			max-width: 70%;
 		    position: relative;
@@ -544,6 +550,9 @@ footer {
 			border-bottom: 2px dashed $theme-primary;
 			top: 5rem;
 			left: -5rem;
+			@include breakpoint(phone) {
+				width: 225%;
+			}
 		}
 
 		.dot {
@@ -590,6 +599,9 @@ footer {
 }
 
 #testimonial-carousel  {
+	@include breakpoint(phone) {
+		margin-right: 1rem;
+	}
 	.carousel-indicators {
 		bottom: -2rem;
 		left: 23%;
@@ -683,6 +695,9 @@ footer {
 	margin-bottom: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
+	@include breakpoint(phone) {
+		font-size: 1.8rem;
+	}
 }
 
 #promo-training {
@@ -757,6 +772,9 @@ footer {
 	padding: 1.5rem;
 	height: 40%;
 	border-top: 1px solid $text-dark;
+	@include breakpoint(phone) {
+		border-top: none;
+	}
 	li {
 		a {
 			text-decoration: none;
@@ -1116,6 +1134,10 @@ table {
 		box-shadow: 2px 2px 10px $text-dark;
 		position: absolute;
 		z-index: 15;
+		@include breakpoint(phone){
+			top: 36%;
+			left: 17%;
+		}
 		.card {
 			font-weight: bold;
 			letter-spacing: 0.1rem;
@@ -1171,6 +1193,9 @@ table {
 			border-top-left-radius: 13%;
 			border-bottom-right-radius: 9%;
 		}
+		@include breakpoint(phone){
+			text-align: center;
+		}
 	}
 	p.lead {
 		margin: 1rem;
@@ -1184,9 +1209,15 @@ table {
 		margin-top: 1rem;
 		font-weight: 500;
 		letter-spacing: 0.3rem;
+		@include breakpoint(phone) {
+			font-size: 1rem;
+		}
 	}
 	.br-right {
 		border-right: 2px dashed $text-dark;
+		@include breakpoint(phone) {
+			border: none;
+		}
 	}
 	.card-header {
 	    margin: 1rem 0;
@@ -1244,7 +1275,9 @@ table {
 
 #form-contact {
 	padding: 0 5rem;
-
+	@include breakpoint(phone){
+		padding: 0;
+	}
 	.msg {
 		display: none;
 	}
@@ -1345,4 +1378,14 @@ button {
     padding: 0 10%;
     z-index: 15;
     background-color: $text-white;
+    	border-bottom: 1px solid $text-dark;
 }
+
+.mb-0 {
+	
+	@include breakpoint(phone) {
+			font-size: 1rem;
+			font-weight: 300;
+	}
+}
+
