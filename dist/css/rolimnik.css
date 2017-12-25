@@ -130,6 +130,9 @@ header {
       text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
       box-shadow: inset 1px 1px 20px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.4);
       background: -webkit-linear-gradient(top, #cb1e1a, #b51a17); }
+    @media (max-width: 767px) {
+      .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.3rem 0.3rem 0.3rem 1.3rem; } }
   .navbar .navbar-nav .nav-item.active {
     background-color: #b51a17;
     border-left: 1px dashed #631a15;
@@ -148,6 +151,7 @@ header {
   margin-left: 45%;
   margin-right: 45%;
   padding: 1.5rem;
+  z-index: 13;
   background-color: #b51a17;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: inset 1px 1px 20px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.4);
@@ -450,6 +454,9 @@ footer {
   -moz-transition: 800ms;
   -o-transition: 800ms;
   transition: 800ms; }
+  @media (max-width: 767px) {
+    .gym-object-info .rounded-circle {
+      margin: 0 5rem; } }
   .gym-object-info .rounded-circle .gym-svg {
     max-width: 70%;
     position: relative;
@@ -463,6 +470,9 @@ footer {
     border-bottom: 2px dashed #b51a17;
     top: 5rem;
     left: -5rem; }
+    @media (max-width: 767px) {
+      .gym-object-info .rounded-circle:before {
+        width: 225%; } }
   .gym-object-info .rounded-circle .dot {
     width: 0.6rem;
     height: 0.6rem;
@@ -507,6 +517,10 @@ footer {
       width: 56%;
       left: 22%;
       border-bottom: 1px solid white; }
+
+@media (max-width: 767px) {
+  #testimonial-carousel {
+    margin-right: 1rem; } }
 
 #testimonial-carousel .carousel-indicators {
   bottom: -2rem;
@@ -591,6 +605,9 @@ footer {
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem; }
+  @media (max-width: 767px) {
+    .display-4 {
+      font-size: 1.8rem; } }
 
 #promo-training .card {
   margin: 1.2rem; }
@@ -655,6 +672,9 @@ footer {
   padding: 1.5rem;
   height: 40%;
   border-top: 1px solid black; }
+  @media (max-width: 767px) {
+    .contact-socials {
+      border-top: none; } }
   .contact-socials li a {
     text-decoration: none;
     color: black;
@@ -1009,6 +1029,10 @@ table i {
   box-shadow: 2px 2px 10px black;
   position: absolute;
   z-index: 15; }
+  @media (max-width: 767px) {
+    .top-nav .working-hours-menu {
+      top: 36%;
+      left: 17%; } }
   .top-nav .working-hours-menu .card {
     font-weight: bold;
     letter-spacing: 0.1rem;
@@ -1050,6 +1074,9 @@ table i {
   #blog-posts .blog-single-post:nth-child(odd) {
     border-top-left-radius: 13%;
     border-bottom-right-radius: 9%; }
+  @media (max-width: 767px) {
+    #blog-posts .blog-single-post {
+      text-align: center; } }
 
 #blog-posts p.lead {
   margin: 1rem; }
@@ -1062,9 +1089,15 @@ table i {
   margin-top: 1rem;
   font-weight: 500;
   letter-spacing: 0.3rem; }
+  @media (max-width: 767px) {
+    #blog-posts .display-4 {
+      font-size: 1rem; } }
 
 #blog-posts .br-right {
   border-right: 2px dashed black; }
+  @media (max-width: 767px) {
+    #blog-posts .br-right {
+      border: none; } }
 
 #blog-posts .card-header {
   margin: 1rem 0;
@@ -1113,6 +1146,9 @@ table i {
 
 #form-contact {
   padding: 0 5rem; }
+  @media (max-width: 767px) {
+    #form-contact {
+      padding: 0; } }
   #form-contact .msg {
     display: none; }
   #form-contact .form-control-feedback {
@@ -1185,4 +1221,10 @@ button {
   width: 100%;
   padding: 0 10%;
   z-index: 15;
-  background-color: white; }
+  background-color: white;
+  border-bottom: 1px solid black; }
+
+@media (max-width: 767px) {
+  .mb-0 {
+    font-size: 1rem;
+    font-weight: 300; } }
